@@ -1,7 +1,7 @@
 ---
 title: 'Homepage'
 meta_title: 'DiversifyIQ'
-description: "Serif is a modern business theme for Hugo."
+description: "A Mastery Skills Training Company"
 intro_image: "images/illustrations/pointing.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true

@@ -1,6 +1,6 @@
 # DiversifyIQ
 
-Serif is a modern business theme for Hugo. It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
+A Mastery Skills Training Company It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
 
 [Live Demo](https://hugo-serif.netlify.app/) |
 [Zerostatic Themes](https://www.zerostatic.io/)
