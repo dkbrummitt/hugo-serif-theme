@@ -16,13 +16,13 @@
   </div>
   {{ if .Params.summary }}
   <div class="team-content">
-    {{ .Params.summary | truncate (.Site.Params.team.summary_large_truncate | default 240 ) "…"}}
+    {{ .Params.summary | truncate (.Site.Params.team.summary_large_truncate | default 120 ) "…"}}
     <a href="{{ .RelPermalink }}">Read more about {{ .Title }} </a>
   </div>
   {{ else }}
   <div class="team-content">
     {{ .Content | truncate (.Site.Params.team.summary_large_truncate | default 120 ) "…" }}
-    <a href="{{ .RelPermalink }}">Read more about {{ .Title }}</a>
+    <a ghref="{{ .RelPermalink }}">Read more about {{ .Title }}</a>
   </div>
   {{ end }}
 </div>

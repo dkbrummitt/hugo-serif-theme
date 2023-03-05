@@ -1,11 +1,11 @@
-# Hugo Serif Theme
+# DiversifyIQ
 
 Serif is a modern business theme for Hugo. It contains multiple content types and pages. The theme is fully responsive, blazing fast and artfully illustrated.
 
 [Live Demo](https://hugo-serif.netlify.app/) |
 [Zerostatic Themes](https://www.zerostatic.io/)
 
-![Hugo Serif Theme screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
+![DiversifyIQ screenshot](https://www.zerostatic.io/theme/hugo-serif/hugo-serif-screenshot.png)
 
 ## Features
 
@@ -162,10 +162,10 @@ You can edit the themes main colors in the `config.toml`. These colors are injec
 #config.toml
 
   [params.colors]
-    primary = "#f24088"
+    primary = "#F08877"
     black = "#2f2f41"
     white = "#ffffff"
-    white_offset = "#f6f7ff"
+    white_offset = "#BFBFBF"
     grey = "#5C5A5A"
 ```
 

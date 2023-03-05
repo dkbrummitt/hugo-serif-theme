@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Params.meta_title | default (printf "%s - %s" .Title .Site.Title) }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ "favicon-32x32.svg" | relURL }}">
+  <link rel="icon" type="image/png" href="{{ " favicon-32x32.png" | relURL }}">
 
   {{ partial "google-fonts.html" . }}
 
@@ -14,22 +14,27 @@
   {{ $css_options := dict "targetPath" "css/style.css" "enableSourceMap" (not hugo.IsProduction) }}
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS $css_options }}
   {{ if hugo.IsProduction }}
-    {{ $style = $style | minify | fingerprint }}
+  {{ $style = $style | minify | fingerprint }}
   {{ end }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ block "header_css" . }}{{ end }}
 
   {{ block "meta_tags" . }}
-    {{ with .Params.description }}<meta name="description" content="{{ . }}"/>{{ end }}
-    <meta property="og:title" content="{{ .Params.meta_title | default .Title }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="{{ .Permalink }}"/>
-    {{ with .Params.image | default .Site.Params.seo.meta_og_image }}<meta property="og:image" content="{{ . | absURL }}"/>{{ end }}
-    {{ with .Params.description }}<meta property="og:description" content="{{ . }}"/>{{ end }}
-    <meta name="twitter:card" content="summary"/>
-    {{ with .Site.Params.seo.meta_twitter_site }}<meta name="twitter:site" content="{{ . }}"/>{{ end }}
-    {{ with .Site.Params.seo.meta_twitter_creator }}<meta name="twitter:creator" content="{{ . }}"/>{{ end }}
+  {{ with .Params.description }}
+  <meta name="description" content="{{ . }}" />{{ end }}
+  <meta property="og:title" content="{{ .Params.meta_title | default .Title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{ with .Params.image | default .Site.Params.seo.meta_og_image }}
+  <meta property="og:image" content="{{ . | absURL }}" />{{ end }}
+  {{ with .Params.description }}
+  <meta property="og:description" content="{{ . }}" />{{ end }}
+  <meta name="twitter:card" content="summary" />
+  {{ with .Site.Params.seo.meta_twitter_site }}
+  <meta name="twitter:site" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.seo.meta_twitter_creator }}
+  <meta name="twitter:creator" content="{{ . }}" />{{ end }}
   {{ end }}
 
 </head>
@@ -51,7 +56,7 @@
   {{ end }}
 
   {{ if hugo.IsProduction }}
-    {{ $scripts = $scripts | minify | fingerprint }}
+  {{ $scripts = $scripts | minify | fingerprint }}
   {{ end }}
   <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
 
